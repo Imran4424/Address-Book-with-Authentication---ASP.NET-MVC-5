@@ -17,13 +17,18 @@ namespace AddressBook.Controllers
             _context = new ApplicationDbContext();
         }
 
+        protected override void Dispose(bool disposing)
+        {
+            _context.Dispose();
+        }
+
         // GET: Contacts / Index
 
         public ActionResult Index()
         {
+            var contacts = _context.Contacts.ToList();
 
-
-            return View();
+            return View(contacts);
         }
     }
 }
