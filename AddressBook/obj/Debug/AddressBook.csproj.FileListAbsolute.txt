@@ -107,3 +107,6 @@ E:\WARRIOR\WEB\ASP.NET MVC 5\AddressBook\AddressBook\obj\Debug\AddressBook.cspro
 E:\WARRIOR\WEB\ASP.NET MVC 5\AddressBook\AddressBook\obj\Debug\AddressBook.csproj.CopyComplete
 E:\WARRIOR\WEB\ASP.NET MVC 5\AddressBook\AddressBook\obj\Debug\AddressBook.dll
 E:\WARRIOR\WEB\ASP.NET MVC 5\AddressBook\AddressBook\obj\Debug\AddressBook.pdb
+E:\WARRIOR\WEB\ASP.NET MVC 5\AddressBook\AddressBook\obj\Debug\AddressBook.Migrations.InitialCreate.resources
+E:\WARRIOR\WEB\ASP.NET MVC 5\AddressBook\AddressBook\obj\Debug\AddressBook.csproj.GenerateResource.cache
+E:\WARRIOR\WEB\ASP.NET MVC 5\AddressBook\AddressBook\obj\Debug\AddressBook.Migrations.InitialModel.resources
