@@ -1,8 +1,28 @@
-﻿
+﻿@model IEnumerable<AddressBook.Models.Contact>
+
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = " Contacts ";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+<h2> Contacts </h2>
 
+<p>
+    @Html.ActionLink("New Contact", "New", "Contacts", null, new { @class = "btn btn-primary" })
+</p>
+
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th> Contacts </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var contact in Model)
+        {
+            <tr>
+                <td> @Html.ActionLink(contact.FullName, "Edit", "Contacts", new { id = contact.Id })</td>
+            </tr>
+        }
+    </tbody>
+</table>
