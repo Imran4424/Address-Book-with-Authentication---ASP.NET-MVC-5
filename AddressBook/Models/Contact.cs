@@ -11,7 +11,7 @@ namespace AddressBook.Models
         public int Id { get; set; }
 
         [Required]
-        [StringLength(255)]
+        //[StringLength(255)]
         [Display(Name = "Full Name")]
         public string FullName { get; set; }
 
@@ -19,7 +19,7 @@ namespace AddressBook.Models
         public string NickName { get; set; }
 
         [Required]
-        [StringLength(20)]
+        //[StringLength(20)]
         public List<string> Mobile { get; set; }
 
         public string Address { get; set; }

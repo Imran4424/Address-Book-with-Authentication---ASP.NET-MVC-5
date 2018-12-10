@@ -31,6 +31,23 @@ namespace AddressBook.Controllers
             return View(contacts);
         }
 
+        // GET: Contacts / Index
+
+        public ActionResult New()
+        {
+            var newContact = new Contact();
+
+            return View("ContactForm", newContact);
+        }
+
+        [HttpPost]
+
+        public ActionResult Save(Contact contact)
+        {
+            _context.Contacts.Add(contact);
+
+            return RedirectToAction("Index", "Contacts");
+        }
 
     }
 }
