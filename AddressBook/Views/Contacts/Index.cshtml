@@ -21,7 +21,7 @@
         @foreach (var contact in Model)
         {
             <tr>
-                <td> @Html.ActionLink(contact.FullName,"Details", "Contacts", new { contact.Id })</td>
+                <td> @Html.ActionLink(contact.FullName,"Details", "Contacts", new { contact.Id }, null)</td>
             </tr>
         }
     </tbody>
