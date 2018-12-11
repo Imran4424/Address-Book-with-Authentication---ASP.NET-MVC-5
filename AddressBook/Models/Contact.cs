@@ -20,7 +20,7 @@ namespace AddressBook.Models
 
         [Required]
         //[StringLength(20)]
-        public List<string> Mobile { get; set; }
+        public string Mobile { get; set; }
 
         public string Address { get; set; }
 

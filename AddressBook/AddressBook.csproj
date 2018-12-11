@@ -188,6 +188,14 @@
     <Compile Include="Migrations\201812101727338_InitialModel.Designer.cs">
       <DependentUpon>201812101727338_InitialModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201812101945014_CustomizeAnnotations.cs" />
+    <Compile Include="Migrations\201812101945014_CustomizeAnnotations.Designer.cs">
+      <DependentUpon>201812101945014_CustomizeAnnotations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812101954501_ConvertToSingleMobile.cs" />
+    <Compile Include="Migrations\201812101954501_ConvertToSingleMobile.Designer.cs">
+      <DependentUpon>201812101954501_ConvertToSingleMobile.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Contact.cs" />
@@ -255,6 +263,7 @@
     <Content Include="Views\Shared\_NavBar.cshtml" />
     <Content Include="Views\Contacts\Index.cshtml" />
     <Content Include="Views\Contacts\ContactForm.cshtml" />
+    <Content Include="Views\Contacts\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -278,6 +287,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201812101727338_InitialModel.resx">
       <DependentUpon>201812101727338_InitialModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812101945014_CustomizeAnnotations.resx">
+      <DependentUpon>201812101945014_CustomizeAnnotations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812101954501_ConvertToSingleMobile.resx">
+      <DependentUpon>201812101954501_ConvertToSingleMobile.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

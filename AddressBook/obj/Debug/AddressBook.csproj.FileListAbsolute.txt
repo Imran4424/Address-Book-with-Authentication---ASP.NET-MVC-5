@@ -110,3 +110,5 @@ E:\WARRIOR\WEB\ASP.NET MVC 5\AddressBook\AddressBook\obj\Debug\AddressBook.pdb
 E:\WARRIOR\WEB\ASP.NET MVC 5\AddressBook\AddressBook\obj\Debug\AddressBook.Migrations.InitialCreate.resources
 E:\WARRIOR\WEB\ASP.NET MVC 5\AddressBook\AddressBook\obj\Debug\AddressBook.csproj.GenerateResource.cache
 E:\WARRIOR\WEB\ASP.NET MVC 5\AddressBook\AddressBook\obj\Debug\AddressBook.Migrations.InitialModel.resources
+E:\WARRIOR\WEB\ASP.NET MVC 5\AddressBook\AddressBook\obj\Debug\AddressBook.Migrations.CustomizeAnnotations.resources
+E:\WARRIOR\WEB\ASP.NET MVC 5\AddressBook\AddressBook\obj\Debug\AddressBook.Migrations.ConvertToSingleMobile.resources

@@ -44,10 +44,19 @@ namespace AddressBook.Controllers
 
         public ActionResult Save(Contact contact)
         {
-            _context.Contacts.Add(contact);
+            _context.Contacts.Add(contact); // to add the data in memory
+            _context.SaveChanges(); // to save the data to database
 
             return RedirectToAction("Index", "Contacts");
         }
 
+        // GET: Contacts / Index
+
+        public ActionResult Details(int id)
+        {
+            var contact = _context.Contacts.SingleOrDefault(c => c.Id == id);
+
+            return View(contact);
+        }
     }
 }
