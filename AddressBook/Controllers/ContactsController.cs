@@ -31,7 +31,7 @@ namespace AddressBook.Controllers
             return View(contacts);
         }
 
-        // GET: Contacts / Index
+        // GET: Contacts / New
 
         public ActionResult New()
         {
@@ -50,7 +50,7 @@ namespace AddressBook.Controllers
             return RedirectToAction("Index", "Contacts");
         }
 
-        // GET: Contacts / Index
+        // GET: Contacts / Details
 
         public ActionResult Details(int id)
         {
@@ -63,16 +63,41 @@ namespace AddressBook.Controllers
 
         public ActionResult Delete(int id)
         {
+            var contact = _context.Contacts.SingleOrDefault(c => c.Id == id);
+
+            _context.Contacts.Remove(contact);
+
+            _context.SaveChanges();
+
             return RedirectToAction("Index", "Contacts");
         }
 
+        // GET: Contacts / Edit
+
         public ActionResult Edit(int id)
         {
-
-
             var contact = _context.Contacts.SingleOrDefault(c => c.Id == id);
 
-            return View(contact);
+            return View("UpdateForm", contact);
+        }
+
+        [HttpPost]
+
+        public ActionResult Update(Contact contact)
+        {
+            var contactInDb = _context.Contacts.Single(c => c.Id == contact.Id);
+
+            contactInDb.FullName = contact.FullName;
+            contactInDb.NickName = contact.NickName;
+            contactInDb.Mobile = contact.Mobile;
+            contactInDb.Address = contact.Address;
+            contactInDb.Email = contact.Email;
+            contactInDb.Birthdate = contact.Birthdate;
+
+
+            _context.SaveChanges();
+
+            return RedirectToAction("Details", "Contacts", contactInDb);
         }
     }
 }
