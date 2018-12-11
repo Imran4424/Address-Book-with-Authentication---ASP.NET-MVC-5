@@ -15,14 +15,21 @@
     <thead>
         <tr>
             <th> Contacts </th>
+            <th> Actions </th>
         </tr>
     </thead>
     <tbody>
         @foreach (var contact in Model)
         {
-            <tr>
-                <td> @Html.ActionLink(contact.FullName,"Details", "Contacts", new { contact.Id }, null)</td>
-            </tr>
+        <tr>
+            <td> @Html.ActionLink(contact.FullName, "Details", "Contacts", new { contact.Id }, null)</td>
+        </tr>
+
+        <tr>
+            <td> @Html.ActionLink("Edit", "Edit", "Contacts", new { contact.Id }, null)</td>
+            <td> @Html.ActionLink("Delete", "Delete", "Contacts", new { contact.Id }, null)</td>
+        </tr>
+
         }
     </tbody>
 </table>
