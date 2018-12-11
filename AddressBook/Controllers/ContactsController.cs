@@ -58,5 +58,21 @@ namespace AddressBook.Controllers
 
             return View(contact);
         }
+
+        // GET: Contacts / Delete
+
+        public ActionResult Delete(int id)
+        {
+            return RedirectToAction("Index", "Contacts");
+        }
+
+        public ActionResult Edit(int id)
+        {
+
+
+            var contact = _context.Contacts.SingleOrDefault(c => c.Id == id);
+
+            return View(contact);
+        }
     }
 }

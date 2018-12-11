@@ -23,11 +23,12 @@
         {
         <tr>
             <td> @Html.ActionLink(contact.FullName, "Details", "Contacts", new { contact.Id }, null)</td>
-        </tr>
 
-        <tr>
-            <td> @Html.ActionLink("Edit", "Edit", "Contacts", new { contact.Id }, null)</td>
-            <td> @Html.ActionLink("Delete", "Delete", "Contacts", new { contact.Id }, null)</td>
+
+            <td>
+                @Html.ActionLink("Edit", "Edit", "Contacts", new { contact.Id }, null)
+                @Html.ActionLink("Delete", "Delete", "Contacts", new { contact.Id }, null)
+            </td>
         </tr>
 
         }
