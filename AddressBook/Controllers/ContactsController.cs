@@ -4,6 +4,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Microsoft.AspNet.Identity;
 using AddressBook.Models;
 
 namespace AddressBook.Controllers
@@ -26,7 +27,11 @@ namespace AddressBook.Controllers
 
         public ActionResult Index()
         {
-            var contacts = _context.Contacts.ToList();
+            //var contacts = _context.Contacts.ToList();
+
+            string currentUserId = User.Identity.GetUserId();
+
+            var contacts = _context.Contacts.Where(c => c.UserIdentity == currentUserId).ToList();
 
             return View(contacts);
         }
@@ -44,6 +49,8 @@ namespace AddressBook.Controllers
 
         public ActionResult Save(Contact contact)
         {
+            contact.UserIdentity = User.Identity.GetUserId();
+
             _context.Contacts.Add(contact); // to add the data in memory
             _context.SaveChanges(); // to save the data to database
 

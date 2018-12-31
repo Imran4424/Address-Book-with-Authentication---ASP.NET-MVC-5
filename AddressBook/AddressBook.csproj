@@ -196,6 +196,10 @@
     <Compile Include="Migrations\201812101954501_ConvertToSingleMobile.Designer.cs">
       <DependentUpon>201812101954501_ConvertToSingleMobile.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201812310927598_UserIdentity.cs" />
+    <Compile Include="Migrations\201812310927598_UserIdentity.Designer.cs">
+      <DependentUpon>201812310927598_UserIdentity.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Contact.cs" />
@@ -294,6 +298,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201812101954501_ConvertToSingleMobile.resx">
       <DependentUpon>201812101954501_ConvertToSingleMobile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812310927598_UserIdentity.resx">
+      <DependentUpon>201812310927598_UserIdentity.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

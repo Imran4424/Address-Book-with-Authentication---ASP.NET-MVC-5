@@ -31,6 +31,7 @@ namespace AddressBook.Models
         [Display(Name = "Date of Birth")]
         public DateTime? Birthdate { get; set; }
 
-        public int UserId { get; set; }
+        [Required]
+        public string UserIdentity { get; set; }
     }
 }
